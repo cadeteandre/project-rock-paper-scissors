@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.ts" defer></script>
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <section class="rounds__container">
+        <a href="index.html">
+          <div id="logo">
+            <img src="./src/images/rock-paper-scissors.png" alt="">
+          </div>
+        </a>
+        <p>How many rounds?</p>
+        <div class="rounds__choice">
+          <label for="roundsCount">
+            <input type="radio" class="roundsCount" name="roundsCount" value="5"> 5
+          </label>
+          <label for="roundsCount">
+            <input type="radio" class="roundsCount" name="roundsCount" value="10"> 10
+          </label>
+          <label for="roundsCount">
+            <input type="radio" class="roundsCount" name="roundsCount" value="15"> 15
+          </label>
+          <label for="roundsCount">
+            <input type="radio" class="roundsCount" name="roundsCount" value="20"> 20
+          </label>
+        </div>
+      </section>
+      <section class="show__results">
+        <div class="player__img">
+          <img src="./src/images/character.png" alt="finger-img">
+          <div id="playerMove"></div>
+        </div>
+        <div class="scoreboard" id="playerWins">0</div>
+        <div class="scoreboard">:</div>
+        <div class="scoreboard" id="computerWins">0</div>
+        <div class="computer__img">
+          <div id="computerMove"></div>
+          <img src="./src/images/robot-2.png" alt="finger-img">
+        </div>
+      </section>
+      <section id="letsPlay">
+        <h2>Let's play</h2>
+        <div id="possibleMoves">
+          <button class="move__btn" id="rockChoice"><img src="./src/images/rockChoice.png" alt=""></button>
+          <button class="move__btn" id="paperChoice"><img src="./src/images/paperChoice.png" alt=""></button>
+          <button class="move__btn" id="scissorsChoice"><img src="./src/images/scissorsChoice.png" alt=""></button>
+        </div>
+        <p>MAKE YOUR MOVE.</p>
+      </section>
+      <a href="index.html">
+        <button id="restart">restart</button>
+      </a>
+      <footer>
+        <a href="https://www.flaticon.com/free-icons/fist" title="fist icons">Fist icons created by Cuputo - Flaticon</a>
+      </footer>
+    </div>
+  </body>
+</html>

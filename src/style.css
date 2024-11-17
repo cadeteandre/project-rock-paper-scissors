@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'roboto-reg';
+  src: url('./fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'roboto-bold';
+  src: url('./fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: 'roboto-ita';
+  src: url('./fonts/Roboto-Italic.ttf');
+}
+@font-face {
+  font-family: 'roboto-light';
+  src: url('./fonts/Roboto-Light.ttf');
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #2f779d;
+  font-family: 'roboto-reg';
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.rounds__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo {
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 6px;
+  width: 80px;
+  background-color: #ffffff88;
+}
+
+.show__results {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffffa2;
+}
+
+.scoreboard {
+  font-family: 'roboto-reg';
+  font-size: 2rem;
+}
+
+#letsPlay {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+#possibleMoves {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.move__btn {
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 0;
+  width: 100px;
+  transition: ease 0.7s;
+  background-color: #ffffffcc;
+}
+
+.move__btn:hover {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#paperChoice img {
+  margin-left: -5px;
+}
+
+img {
+  width: 4rem;
+  transition: ease 0.5s;
+}
+
+.player__img, .computer__img {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.move__img {
+  width: 1.6rem;
+}
+
+#restart {
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: lavender;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  padding: 6px;
+  background: none;
+}
+
+#restart:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  letter-spacing: 2.5px;
+}
+
+footer a {
+  font-size: 0.7rem;
+  color: #fff;
+}

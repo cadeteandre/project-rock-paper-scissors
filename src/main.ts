@@ -1,4 +1,5 @@
 import './style.css'
+import * as winLogo from './images/you-win.png';
 
 //* ---------------------- Selecting HTML Elements ----------------------
 const roundsOptions = document.querySelectorAll('.roundsCount') as NodeListOf<HTMLInputElement>;
@@ -59,12 +60,12 @@ function runningGame(playerMove: string, computerMove: string): void {
   if(roundsCount === roundsAmount) {
     if(playerWinsCount > computerWinsCount) {
       letsPlayDiv.innerHTML = `
-      <div class="finally__img winLogo"></div>
+      <div class="finally__img"><img src={${winLogo}}></div>
     `;
     } else if(computerWinsCount > playerWinsCount) {
       letsPlayDiv.innerHTML = `
-      <div class="finally__img winLogo"></div>
-      <div class="finally__img winLogo"></div>
+      <div class="finally__img"><img src={${winLogo}}></div>
+      <div class="finally__img"><img src={${winLogo}}></div>
     `;
     } else if(computerWinsCount === playerWinsCount) {
       letsPlayDiv.innerHTML = `

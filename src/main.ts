@@ -59,13 +59,17 @@ function runningGame(playerMove: string, computerMove: string): void {
   if(roundsCount === roundsAmount) {
     if(playerWinsCount > computerWinsCount) {
       letsPlayDiv.innerHTML = `
-      <div class="finally__img"><img src="../public/you-win.png"></div>
+      <div class="finally__img"><img src="./images/you-win.png"></div>
     `;
     } else if(computerWinsCount > playerWinsCount) {
       letsPlayDiv.innerHTML = `
-      <div class="finally__img"><img src="../public/game-over-2.png"></div>
-      <div class="finally__img"><img src="../public/game-over.png"></div>
+      <div class="finally__img"><img src="./images/game-over-2.png"></div>
+      <div class="finally__img"><img src="./images/game-over.png"></div>
     `;
+    } else if(computerWinsCount === playerWinsCount) {
+      letsPlayDiv.innerHTML = `
+        <p>Draw game!</p>
+      `;
     }
   }
 }

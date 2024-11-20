@@ -1,10 +1,10 @@
 import './style.css'
-import * as winLogo from './images/you-win.png';
-import * as gameOver1 from './images/game-over-2.png';
-import * as gameOver2 from './images/game-over.png';
-import * as rockImg from './images/rockChoice.png';
-import * as paperImg from './images/paperChoice.png';
-import * as scissorsImg from './images/scissorsChoice.png';
+import  winLogo from './images/you-win.png';
+import  gameOver1 from './images/game-over-2.png';
+import  gameOver2 from './images/game-over.png';
+import  rockImg from './images/rockChoice.png';
+import  paperImg from './images/paperChoice.png';
+import  scissorsImg from './images/scissorsChoice.png';
 
 //* ---------------------- Selecting HTML Elements ----------------------
 const roundsOptions = document.querySelectorAll('.roundsCount') as NodeListOf<HTMLInputElement>;
@@ -65,12 +65,12 @@ function runningGame(playerMove: string, computerMove: string): void {
   if(roundsCount === roundsAmount) {
     if(playerWinsCount > computerWinsCount) {
       letsPlayDiv.innerHTML = `
-      <div class="finally__img"><img src={${winLogo}}></div>
+      <div class="finally__img"><img src="${winLogo}"></div>
     `;
     } else if(computerWinsCount > playerWinsCount) {
       letsPlayDiv.innerHTML = `
-      <div class="finally__img"><img src={${gameOver1}}></div>
-      <div class="finally__img"><img src={${gameOver2}}></div>
+      <div class="finally__img"><img src="${gameOver1}"></div>
+      <div class="finally__img"><img src="${gameOver2}"></div>
     `;
     } else if(computerWinsCount === playerWinsCount) {
       letsPlayDiv.innerHTML = `

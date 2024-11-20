@@ -129,9 +129,3 @@ footer a {
   font-size: 0.7rem;
   color: #fff;
 }
-
-.winLogo {
-  background: url('/public/you-win.png');
-  width: 200px;
-  height: 200px;
-}

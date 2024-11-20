@@ -1,5 +1,10 @@
 import './style.css'
 import * as winLogo from './images/you-win.png';
+import * as gameOver1 from './images/game-over-2.png';
+import * as gameOver2 from './images/game-over.png';
+import * as rockImg from './images/rockChoice.png';
+import * as paperImg from './images/paperChoice.png';
+import * as scissorsImg from './images/scissorsChoice.png';
 
 //* ---------------------- Selecting HTML Elements ----------------------
 const roundsOptions = document.querySelectorAll('.roundsCount') as NodeListOf<HTMLInputElement>;
@@ -64,8 +69,8 @@ function runningGame(playerMove: string, computerMove: string): void {
     `;
     } else if(computerWinsCount > playerWinsCount) {
       letsPlayDiv.innerHTML = `
-      <div class="finally__img"><img src={${winLogo}}></div>
-      <div class="finally__img"><img src={${winLogo}}></div>
+      <div class="finally__img"><img src={${gameOver1}}></div>
+      <div class="finally__img"><img src={${gameOver2}}></div>
     `;
     } else if(computerWinsCount === playerWinsCount) {
       letsPlayDiv.innerHTML = `
@@ -78,7 +83,18 @@ function runningGame(playerMove: string, computerMove: string): void {
 function displayMove(move: string, player: string): void {
   const moveImg = document.createElement('img') as HTMLImageElement;
   moveImg.classList.add('move__img');
-  moveImg.src = `./src/images/${move}.png`;
+
+  switch(move) {
+    case 'rockChoice':
+      moveImg.src = `${rockImg}`;
+      break;
+    case 'paperChoice':
+      moveImg.src = `${paperImg}`;
+      break;
+    case 'scissorsChoice':
+      moveImg.src = `${scissorsImg}`;
+      break;
+  }
 
   if(player === 'player') {
     playerMove.innerHTML = '';

@@ -1,5 +1,5 @@
 import './style.css'
-import * winLogo from './images/you-win.png';
+import * as winLogo from './images/you-win.png';
 
 //* ---------------------- Selecting HTML Elements ----------------------
 const roundsOptions = document.querySelectorAll('.roundsCount') as NodeListOf<HTMLInputElement>;
